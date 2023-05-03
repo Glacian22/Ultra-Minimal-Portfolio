@@ -1,0 +1,25 @@
+.nav {
+  height: 40px;
+  width: 500px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto
+}
+
+#nav-wrap {
+  width: 500px;
+  margin: auto
+}
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    height: 80px;
+    width: 250px;
+    margin: auto;
+    display: inline-grid;
+    grid-template-columns: auto auto
+  }
+  #nav-wrap {
+    width: 250px;
+    margin: auto
+  }
+}

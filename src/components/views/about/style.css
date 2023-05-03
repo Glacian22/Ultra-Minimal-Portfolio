@@ -1,0 +1,23 @@
+#about {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  font-weight: 600;
+  animation:animateabout 1s
+}
+  @keyframes animateabout{
+  from{opacity:0} 
+  to{opacity:1}
+}
+
+.about-headers {
+  font-weight: 900;
+  margin-right: .25rem
+}
+
+@media only screen and (max-width: 780px) {
+  #about {
+    width: 80vw;
+  }
+}
