@@ -4,7 +4,7 @@ import github from '../../images/github.png'
 import linkedin from '../../images/linked-in.png'
 import './style.css'
 
-export default function Footer (props) {
+export default function Footer(props: any) {
   const arr = [
     <div key='0' className='w3-animate-left'><a href='https://www.linkedin.com/in/abram-thau/' target='_blank' rel='noopener noreferrer'>
       <img className='ind-icon' alt='linked-in' src={linkedin} /></a></div>,
@@ -13,20 +13,19 @@ export default function Footer (props) {
     <div key='2' className='w3-animate-left'><a href='mailto:glacian22@gmail.com' target='_blank' rel='noopener noreferrer'>
       <img className='ind-icon email' alt='email' src={envelope} /></a></div>
   ]
-  const [elements, setElements] = useState([])
-
-  let loadLinks = linksArr => {
-    let count = 0
-    let linkTimer = setInterval(() => {
-      setElements(() => [linksArr.slice(0, count)])
-      count++
-      if (count > linksArr.length) {
-        clearInterval(linkTimer)
-      }
-    }, 250)
-  }
+  const [elements, setElements] = useState(Array<any>)
 
   useEffect(() => {
+    let loadLinks = linksArr => {
+      let count = 0
+      let linkTimer = setInterval(() => {
+        setElements(() => [linksArr.slice(0, count + 1)])
+        count++
+        if (count >= linksArr.length) {
+          clearInterval(linkTimer)
+        }
+      }, 350)
+    }
     setTimeout(() => {
       loadLinks(arr)
     }, 200)
