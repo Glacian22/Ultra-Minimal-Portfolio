@@ -1,3 +1,24 @@
+.content {
+  text-align: left;
+  width: 75vw;
+  margin: auto;
+  margin-top: 20vh;
+}
+
+@media only screen and (max-width: 780px) {
+  .content {
+    margin-top: 10vh;
+    width: auto
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .content {
+    margin-top: 1vh
+  }
+}
+
+
 #about {
   width: 500px;
   margin-left: auto;
@@ -10,31 +31,32 @@
   to{opacity:1}
 }
 
-.about-headers {
-  font-weight: 900;
-  margin-right: .25rem;
-  animation:animateabout 1s
-}
-
-.about-content {
+.about-content, .about-headers {
   opacity: 0;
   animation:animateabout 1.5s;
   animation-fill-mode: forwards;
 }
-#name {
+
+.about-headers {
+  font-weight: 900;
+  margin-right: .25rem;
   animation-delay: .5s
 }
-#species {
-  animation-delay: 1s
-}
-#occ {
+
+#name {
   animation-delay: 1.5s
 }
-#background {
+#species {
   animation-delay: 2s
 }
-#tech {
+#occ {
   animation-delay: 2.5s
+}
+#background {
+  animation-delay: 3s
+}
+#tech {
+  animation-delay: 3.5s
 }
 
 @media only screen and (max-width: 780px) {
