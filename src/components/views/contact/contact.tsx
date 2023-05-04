@@ -1,26 +1,10 @@
 import React, { useState } from 'react'
-import emailjs from 'emailjs-com'
 import './style.css'
 
 export default function Contact () {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-
-  // let handleSubmit = event => {
-    // event.preventDefault()
-    // let mailKey = process.env.REACT_APP_EMAILJS_KEY
-    // emailjs.sendForm('portfolio', 'contact_form', event.target, mailKey)
-    //   .then((result) => {
-    //     console.log(result.text)
-    //     setName('')
-    //     setEmail('')
-    //     setMessage('')
-    //     window.alert('Your message is on its way, thanks!')
-    //   }, (error) => {
-    //     console.log(`error: ${error.text}`)
-    //   })
-  // }
 
   return (
     <div className='content' id='contact'>
