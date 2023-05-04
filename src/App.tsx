@@ -13,11 +13,11 @@ function App() {
       <div className='App'>
         <Nav>
           <NavComp exact destination='about' />
-          <NavComp destination='contact' />
+          <NavComp destination='about' />
         </Nav>
           <Routes>
             <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
+            {/* <Route path='/contact' element={<Contact />} /> */}
             <Route path='*' element={<Navigate to="/about" />} />
           </Routes>
       </div>
