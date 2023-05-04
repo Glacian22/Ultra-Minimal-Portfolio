@@ -21,8 +21,8 @@ const onSubmit = (event: FormEvent) => {
 };
 
   return (
-    <div className='content' id='contact' onSubmit={onSubmit}>
-      <form id='contact-form' name='contact-form'>
+    <div className='content' id='contact'>
+      <form id='contact-form' name='contact-form' method='POST' onSubmit={onSubmit}>
         <label htmlFor='name'>{'Name: '}</label>
         <input type='text' name='name' id='name' value={form.name} onChange={onFieldChange} />
         <label htmlFor='email'>{'Email: '}</label>
