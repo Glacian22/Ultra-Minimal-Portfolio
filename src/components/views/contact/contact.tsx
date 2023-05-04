@@ -1,39 +1,38 @@
-import React, { useState } from 'react'
-import emailjs from 'emailjs-com'
+import React, { ChangeEvent, FormEvent, useState } from 'react'
 import './style.css'
 
 export default function Contact () {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [form, setForm] = useState({name: '', email: '', message: ''})
+  const [response, setResponse] =useState('')
+  
+  const onFieldChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    let value: typeof form[keyof typeof form] = event.target.value;
+    setForm({ ...form, [event.target.id]: value });
+};
 
-  // let handleSubmit = event => {
-    // event.preventDefault()
-    // let mailKey = process.env.REACT_APP_EMAILJS_KEY
-    // emailjs.sendForm('portfolio', 'contact_form', event.target, mailKey)
-    //   .then((result) => {
-    //     console.log(result.text)
-    //     setName('')
-    //     setEmail('')
-    //     setMessage('')
-    //     window.alert('Your message is on its way, thanks!')
-    //   }, (error) => {
-    //     console.log(`error: ${error.text}`)
-    //   })
-  // }
+const onSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    if (form.name.length === 0 || form.email.length === 0 || form.message.length === 0 ) {
+      setResponse('Please fill in all of the fields, thanks!')
+      return;
+    }
+    setResponse('Thank you for getting in touch!')
+    setForm({name: '', email: '', message: ''})
+};
 
   return (
-    <div className='content' id='contact'>
-      {/* <form id='contact-form' onSubmit={handleSubmit}> */}
-      <form id='contact-form'>
+    <div className='content' id='contact' onSubmit={onSubmit}>
+      <form id='contact-form' name='contact-form'>
         <label htmlFor='name'>{'Name: '}</label>
-        <input type='text' name='name' id='name' value={name} onChange={(event) => setName(event.target.value)} />
+        <input type='text' name='name' id='name' value={form.name} onChange={onFieldChange} />
         <label htmlFor='email'>{'Email: '}</label>
-        <input type='text' name='email' id='email' value={email} onChange={(event) => setEmail(event.target.value)} />
+        <input type='text' name='email' id='email' value={form.email} onChange={onFieldChange} />
         <label htmlFor='message'>{'Message: '}</label>
-        <textarea name='text' id='message' value={message} onChange={(event) => setMessage(event.target.value)} />
-        <input type='submit' value='submit' id='submitbtn' />
+        <textarea name='message' id='message' value={form.message} onChange={onFieldChange} />
+        <button type='submit'> send </button>
       </form>
+      <br/>
+      <div id='form-response'>{response}</div>
     </div>
   )
 }
