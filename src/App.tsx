@@ -8,23 +8,21 @@ import Footer from './components/footer/footer'
 import Content from './components/content/content'
 import './App.css'
 
-function App () {
+function App() {
   return (
     <BrowserRouter>
       <div className='App'>
         <Nav>
           <NavComp exact destination='about' />
-          {/* <NavComp destination='portfolio' /> */}
           <NavComp destination='contact' />
         </Nav>
         <Content>
           <Routes>
-            <Route path='/about' element={<About/>} />
-            <Route path='/contact' element={<Contact/>} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<Navigate to="/about" />} />
           </Routes>
         </Content>
-        {/* <NextBtn/> */}
       </div>
       <Footer />
     </BrowserRouter>

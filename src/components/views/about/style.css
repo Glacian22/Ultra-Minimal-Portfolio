@@ -4,7 +4,6 @@
   margin-right: auto;
   position:relative;
   font-weight: 600;
-  animation:animateabout 1s
 }
   @keyframes animateabout{
   from{opacity:0} 
@@ -13,7 +12,34 @@
 
 .about-headers {
   font-weight: 900;
-  margin-right: .25rem
+  margin-right: .25rem;
+  animation:animateabout 1s
+}
+
+.about-content {
+  opacity: 0;
+  animation:animate-content 1.5s;
+  animation-fill-mode: forwards;
+}
+#name {
+  animation-delay: .5s
+}
+#species {
+  animation-delay: 1s
+}
+#occ {
+  animation-delay: 1.5s
+}
+#background {
+  animation-delay: 2s
+}
+#tech {
+  animation-delay: 2.5s
+}
+
+@keyframes animate-content{
+  from {opacity:0}
+  to {opacity:1}
 }
 
 @media only screen and (max-width: 780px) {
