@@ -3,6 +3,7 @@ import './style.css'
 
 export default function Contact () {
   const [form, setForm] = useState({name: '', email: '', message: ''})
+  const [response, setResponse] =useState('')
   
   const onFieldChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     let value: typeof form[keyof typeof form] = event.target.value;
@@ -11,7 +12,12 @@ export default function Contact () {
 
 const onSubmit = (event: FormEvent) => {
     event.preventDefault();
-    console.log(form);
+    if (form.name.length === 0 || form.email.length === 0 || form.message.length === 0 ) {
+      setResponse('Please fill in all of the fields, thanks!')
+      return;
+    }
+    setResponse('Thank you for getting in touch!')
+    setForm({name: '', email: '', message: ''})
 };
 
   return (
@@ -25,6 +31,8 @@ const onSubmit = (event: FormEvent) => {
         <textarea name='message' id='message' value={form.message} onChange={onFieldChange} />
         <button type='submit'> send </button>
       </form>
+      <br/>
+      <div id='form-response'>{response}</div>
     </div>
   )
 }
