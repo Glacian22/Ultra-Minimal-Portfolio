@@ -4,7 +4,7 @@ import './style.css'
 
 export default function NavComp (props: any) {
   return (
-    <NavLink to={`/${props.destination}`} className='w3-animate-left' activeClassName='active'>
+    <NavLink to={`/${props.destination}`} className='w3-animate-left'>
       {props.destination}
     </NavLink>
   )

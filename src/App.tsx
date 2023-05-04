@@ -13,7 +13,7 @@ function App() {
       <div className='App'>
         <Nav>
           <NavComp exact destination='about' />
-          <NavComp destination='about' />
+          <NavComp destination='contact' />
         </Nav>
           <Routes>
             <Route path='/about' element={<About />} />
