@@ -11,6 +11,7 @@ export default function Contact() {
   };
 
   const onSubmit = (event: FormEvent) => {
+    event.preventDefault();
     if (form.name.length === 0 || form.email.length === 0 || form.message.length === 0) {
       setResponse('Please fill in all of the fields, thanks!')
       return;
@@ -18,11 +19,10 @@ export default function Contact() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify({ "form-name": "contact-form", ...form })
+      body: new URLSearchParams({ "form-name": "contact-form", ...form })
     })
     .then(() => setResponse('Thank you for getting in touch!'))
     .catch(error => setResponse('Hmm, that did not send. Please try again later.'));
-    event.preventDefault();
     setForm({ name: '', email: '', message: '' })
   };
 
