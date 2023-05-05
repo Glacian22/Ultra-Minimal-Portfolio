@@ -2,7 +2,7 @@
   height: 40px;
   width: 500px;
   display: inline-grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 #nav-wrap {
@@ -16,7 +16,6 @@
     width: 250px;
     margin: auto;
     display: inline-grid;
-    grid-template-columns: auto auto
   }
   #nav-wrap {
     width: 250px;

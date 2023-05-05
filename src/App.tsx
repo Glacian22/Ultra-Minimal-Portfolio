@@ -14,6 +14,7 @@ function App() {
       <div className='App'>
         <Nav>
           <NavComp exact destination='about' />
+          <NavComp destination='work' />
           <NavComp destination='contact' />
         </Nav>
           <Routes>
