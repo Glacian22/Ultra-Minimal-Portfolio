@@ -9,7 +9,6 @@ let About = () => {
     occ: 'Software Developer, writer',
     background: `Fullstack Dev and Writer, specializing in modern JS, Typescript, React, Redux, Node, Relational and Nonrelational DBs, DevOps, CI/CD pipelines, and most importantly: thoughtfully written maintainable code paired solid testing.`,
     tech: 'SQL, MongoDB, Firebase, IndexedDB, Redis, AWS, GCP, REST APIs, Tailwind, Bootstrap, Material UI, GraphQL, Cypress, Playwright, Webpack, Babel, Vite, Github, Gitlab, and more.',
-    work: `From fresh greenfield startup engineering (CTO/Lead Developer at Neddie.co), to huge legacy projects (Fullstack Engineer at Frontier Communications), and points in-between (enterprise engineering liason at Cypress.io), I've worked on a broad range of software development projects and collaborated closely with leadership, stakeholders, and designers to get applications and services working smoothly.`
   }
 
   return (
@@ -35,10 +34,6 @@ let About = () => {
           <span className='about-headers'>Other Technologies:</span>
           <span className='about-content' id='tech'>{text.tech}</span>
         </p>
-        {/* <p>
-          <span className='about-headers'>Work History:</span>
-          <span className='about-content' id='work'>{text.work}</span>
-        </p> */}
       </div>
     </div>
   )
