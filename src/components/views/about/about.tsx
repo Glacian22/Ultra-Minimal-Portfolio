@@ -37,7 +37,7 @@ let About = () => {
         </p>
         {/* <p>
           <span className='about-headers'>Work History:</span>
-          <span className='about-content' id='work' dangerouslySetInnerHTML={{__html: text.work}}></span>
+          <span className='about-content' id='work'>{text.work}</span>
         </p> */}
       </div>
     </div>
