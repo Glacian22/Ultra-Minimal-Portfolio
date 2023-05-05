@@ -35,10 +35,10 @@ let About = () => {
           <span className='about-headers'>Other Technologies:</span>
           <span className='about-content' id='tech'>{text.tech}</span>
         </p>
-        <p>
+        {/* <p>
           <span className='about-headers'>Work History:</span>
           <span className='about-content' id='work' dangerouslySetInnerHTML={{__html: text.work}}></span>
-        </p>
+        </p> */}
       </div>
     </div>
   )
