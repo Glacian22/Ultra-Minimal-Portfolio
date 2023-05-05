@@ -58,6 +58,9 @@
 #tech {
   animation-delay: 3.5s
 }
+#work {
+  animation-delay: 4s
+}
 
 @media only screen and (max-width: 780px) {
   #about {
