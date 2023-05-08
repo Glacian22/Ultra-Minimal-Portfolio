@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './style.css'
 
-function Nav (props: any) {
+function Nav(props: any) {
   const [elements, setElements] = useState(Array<any>)
 
   useEffect(() => {
@@ -16,11 +16,9 @@ function Nav (props: any) {
   }, [props.children])
 
   return (
-    <div id='nav-wrap'>
-      <nav className='nav'>
-        {elements}
-      </nav>
-    </div>
+    <nav className='nav'>
+      {elements}
+    </nav>
   )
 }
 

@@ -1,11 +1,12 @@
 .content {
   text-align: left;
-  width: 75vw;
-  margin: auto;
-  margin-top: 20vh;
+  /* width: 75vw; */
+  /* margin: auto; */
+  /* margin-top: 20vh; */
+  overflow: scroll
 }
 
-@media only screen and (max-width: 780px) {
+/* @media only screen and (max-width: 780px) {
   .content {
     margin-top: 0;
     width: auto
@@ -16,11 +17,11 @@
   .content {
     margin-top: 1vh
   }
-}
+} */
 
 
 #about {
-  width: 500px;
+  /* width: 500px; */
   margin-left: auto;
   margin-right: auto;
   position:relative;
@@ -62,7 +63,7 @@
   animation-delay: 4s
 }
 
-@media only screen and (max-width: 780px) {
+/* @media only screen and (max-width: 780px) {
   #about {
     width: 80vw;
   }
@@ -72,4 +73,4 @@
     height: 70vh;
     overflow: scroll;
   }
-}
+} */

@@ -1,10 +1,10 @@
 #work-history {
-  width: 500px;
+  /* width: 500px; */
   animation:animatecontact 1s
 }
 
-@media only screen and (max-width: 780px) {
+/* @media only screen and (max-width: 780px) {
   #work-history {
     width: 80vw;
   }
-}
+} */
