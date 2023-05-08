@@ -1,18 +1,10 @@
 #foot {
-  /* position: relative;
-  margin-left: calc(50vw - 100px);
-  align-content: center;
-  width: 200px; */
   display: inline-grid;
-  grid-template-columns: auto auto auto
+  grid-template-columns: repeat(3, max(20vw, 80px));
+  align-items: center;
+  justify-content: center;
+  height: 60px
 }
-
-/* #foot-wrap {
-  margin: 0 auto 0 auto;
-  width: 200px;
-  position: absolute;
-  bottom: 5px
-} */
 
 .ind-icon {
   display: block;

@@ -1,11 +1,22 @@
 .App {
   text-align: center;
-  /* width: 75%; */
   height: 100vh;
   margin: auto;
   display: grid;
   grid-template-rows:auto 1fr auto;
-  /* margin-top: 10vh */
+}
+
+.content {
+  text-align: left;
+
+  margin: auto;
+  overflow: scroll
+}
+
+@media only screen and (min-width: 720px) {
+  .content {
+    width: 65ch
+  }
 }
 
 @keyframes animatecontact{
@@ -14,12 +25,7 @@
 }
 
 @media only screen and (max-width: 780px) {
-  /* .App {
-    width: 95vw
-  } */
-}
-/* @media only screen and (max-height: 780px) {
   .App {
-    margin-top: 5vw
+    width: 95vw
   }
-} */
+}
