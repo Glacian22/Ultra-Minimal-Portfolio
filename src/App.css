@@ -6,16 +6,22 @@
   grid-template-rows:auto 1fr auto;
 }
 
-.content {
+#main {
   text-align: left;
-
-  margin: auto;
-  overflow: scroll
+  overflow: scroll;
+  display: grid;
+  align-content: center;
+  justify-content: center;
 }
 
-@media only screen and (min-width: 720px) {
-  .content {
-    width: 65ch
+.content {
+  max-width: 65ch
+}
+
+@media only screen and (max-height: 720px) {
+  #main {
+    margin-top: 20px;
+    align-content: start;
   }
 }
 
