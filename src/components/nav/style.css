@@ -1,24 +1,11 @@
 .nav {
   height: 40px;
-  width: 500px;
   display: inline-grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, max(10vw, 65px));
+  align-items: center;
+  justify-content: center;
 }
 
-#nav-wrap {
-  width: 500px;
-  margin: auto
-}
+@media only screen and (min-width: 600px) {
 
-@media only screen and (max-width: 600px) {
-  .nav {
-    height: 80px;
-    width: 250px;
-    margin: auto;
-    display: inline-grid;
-  }
-  #nav-wrap {
-    width: 250px;
-    margin: auto
-  }
 }

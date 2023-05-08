@@ -16,7 +16,7 @@ export default function Footer(props: any) {
   const [elements, setElements] = useState(Array<any>)
 
   useEffect(() => {
-    let loadLinks = (linksArr:any) => {
+    let loadLinks = (linksArr: any) => {
       let count = 0
       let linkTimer = setInterval(() => {
         setElements(() => [linksArr.slice(0, count + 1)])
@@ -32,10 +32,8 @@ export default function Footer(props: any) {
   }, [])
 
   return (
-    <div id='foot-wrap'>
-      <div id='foot'>
-        {elements}
-      </div>
+    <div id='foot'>
+      {elements}
     </div>
   )
 }

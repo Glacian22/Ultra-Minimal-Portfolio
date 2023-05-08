@@ -17,14 +17,16 @@ function App() {
           <NavComp destination='work' />
           <NavComp destination='contact' />
         </Nav>
+        <div id='main'>
           <Routes>
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/work' element={<Work />} />
             <Route path='*' element={<Navigate to="/about" />} />
           </Routes>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   )
 }

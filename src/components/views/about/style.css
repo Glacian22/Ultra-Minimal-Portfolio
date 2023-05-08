@@ -1,39 +1,21 @@
-.content {
-  text-align: left;
-  width: 75vw;
-  margin: auto;
-  margin-top: 20vh;
-}
-
-@media only screen and (max-width: 780px) {
-  .content {
-    margin-top: 0;
-    width: auto
-  }
-}
-
-@media only screen and (max-height: 400px) {
-  .content {
-    margin-top: 1vh
-  }
-}
-
-
 #about {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  position:relative;
   font-weight: 600;
 }
-  @keyframes animateabout{
-  from{opacity:0} 
-  to{opacity:1}
+
+@keyframes animateabout {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
-.about-content, .about-headers {
+.about-content,
+.about-headers {
   opacity: 0;
-  animation:animateabout 1.5s;
+  animation: animateabout 1.5s;
   animation-fill-mode: forwards;
 }
 
@@ -46,30 +28,23 @@
 #name {
   animation-delay: 1.5s
 }
+
 #species {
   animation-delay: 2s
 }
+
 #occ {
   animation-delay: 2.5s
 }
+
 #background {
   animation-delay: 3s
 }
+
 #tech {
   animation-delay: 3.5s
 }
+
 #work {
   animation-delay: 4s
-}
-
-@media only screen and (max-width: 780px) {
-  #about {
-    width: 80vw;
-  }
-}
-@media only screen and (max-height: 600px) {
-  #about {
-    height: 70vh;
-    overflow: scroll;
-  }
 }
