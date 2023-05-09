@@ -1,6 +1,6 @@
 #foot {
   display: inline-grid;
-  grid-template-columns: repeat(3, max(20vw, 80px));
+  grid-template-columns: repeat(3, clamp(100px, 25vw, 300px));
   align-items: center;
   justify-content: center;
   height: 60px

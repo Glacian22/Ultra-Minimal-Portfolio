@@ -7,7 +7,7 @@ let About = () => {
     name: 'Abram Thau',
     species: 'Human',
     occ: 'Software Developer, writer',
-    background: `Fullstack Dev and Writer, specializing in modern JS, Typescript, React, Redux, Node, Relational and Nonrelational DBs, DevOps, CI/CD pipelines, and most importantly: thoughtfully written maintainable code paired solid testing.`,
+    background: `Fullstack Dev and Writer, specializing in modern JS, Typescript, React, Redux, Node, SQL/NoSQL DBs, DevOps, CI/CD pipelines, and most importantly: thoughtfully written maintainable code paired solid testing.`,
     tech: 'SQL, MongoDB, Firebase, IndexedDB, Redis, AWS, GCP, REST APIs, Tailwind, Bootstrap, Material UI, GraphQL, Cypress, Playwright, Webpack, Babel, Vite, Github, Gitlab, and more.',
   }
 
