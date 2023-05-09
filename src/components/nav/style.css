@@ -1,7 +1,7 @@
 .nav {
   height: 40px;
   display: inline-grid;
-  grid-template-columns: repeat(3, max(10vw, 65px));
+  grid-template-columns: repeat(3, clamp(100px, 10vw, 150px));
   align-items: center;
   justify-content: center;
 }

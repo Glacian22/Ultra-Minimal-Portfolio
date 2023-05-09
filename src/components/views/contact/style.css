@@ -1,6 +1,6 @@
 #contact {
-  /* width: 500px; */
   position:relative;
+  width: min(65ch, 90vw);
   animation:animatecontact 1s
 }
 
@@ -22,19 +22,3 @@ textarea {
   height: 90px;
   margin-bottom: 20px
 }
-
-/* @media only screen and (max-width: 780px) {
-  #contact {
-    width: 80vw;
-  }
-} */
-/* 
-@media only screen and (max-height: 640px) {
-  input {
-    margin-bottom: 0
-  }
-  
-  textarea {
-    height: 60px;
-  }
-} */
