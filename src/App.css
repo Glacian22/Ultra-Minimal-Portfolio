@@ -3,7 +3,7 @@
   height: 100vh;
   margin: auto;
   display: grid;
-  grid-template-rows:auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
 }
 
 #main::-webkit-scrollbar {
@@ -16,6 +16,8 @@
   display: grid;
   align-content: center;
   justify-content: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .content {
@@ -29,8 +31,13 @@
 }
 
 @keyframes rotation {
-  0% { --gradient-angle: 0deg;}
-  100% { --gradient-angle: 360deg;}
+  0% {
+    --gradient-angle: 0deg;
+  }
+
+  100% {
+    --gradient-angle: 360deg;
+  }
 }
 
 :root {
@@ -48,9 +55,14 @@
   }
 }
 
-@keyframes animatecontact{
-  from{opacity:0} 
-  to{opacity:1}
+@keyframes animatecontact {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @media only screen and (max-width: 780px) {
