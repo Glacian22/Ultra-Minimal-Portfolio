@@ -1,7 +1,3 @@
-#contact {
-  width: min(65ch, 90vw);
-}
-
 #contact > * {
   animation:animatecontact 1s;
 }
