@@ -6,6 +6,10 @@
   grid-template-rows:auto 1fr auto;
 }
 
+#main::-webkit-scrollbar {
+  display: none !important;
+}
+
 #main {
   text-align: left;
   overflow: scroll;
@@ -17,6 +21,25 @@
 .content {
   max-width: 65ch
 }
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false
+}
+
+@keyframes rotation {
+  0% { --gradient-angle: 0deg;}
+  100% { --gradient-angle: 360deg;}
+}
+
+:root {
+  --pink: #fc3dec;
+  --magenta: #f0138c;
+  --elecblue: #f0138c;
+  --darkblue: #4e35db;
+}
+
 
 @media only screen and (max-height: 720px) {
   #main {
