@@ -8,27 +8,3 @@
   text-shadow: 0 0 25px #fff, 0 0 15px #fff;
   transition: text-shadow .4s
 }
-
-.nav-comp {
-  position: relative;
-  background-color: black;
-}
-
-.nav-comp::before, .nav-comp::after {
-  content: "";
-  position: absolute;
-  inset: 5px 5px -1px -1px;
-  background: linear-gradient(
-    0deg,
-    var(--gradient-angle),
-    var(--magenta),
-    var(--elecblue),
-    var(--darkblue));
-  border-radius: inherit;
-  animation: rotation 20s linear infinite;
-  z-index: -1
-}
-
-.nav-comp::after {
-  filter: blur(3.5rem)
-}

@@ -21,8 +21,34 @@
 }
 
 .content {
-  max-width: 65ch
+  max-width: 65ch;
+  position: relative;
+  background-color: black;
+  padding: 10px;
+  border-radius: 1rem;
 }
+
+.content::before, .content::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--pink),
+    var(--elecblue),
+    var(--darkblue),
+    var(--elecblue),
+    var(--pink));
+  border-radius: inherit;
+  /* animation: animate-contact 1s; */
+  animation: rotation 5s linear infinite;
+  z-index: -1
+}
+
+.content::after {
+  filter: blur(2rem)
+}
+
 
 @property --gradient-angle {
   syntax: "<angle>";
@@ -67,7 +93,10 @@
 
 @media only screen and (max-width: 780px) {
   .App {
-    width: 95vw;
+    width: 100vw;
     height: 90vh;
+  }
+  .content {
+    max-width: 50ch
   }
 }
