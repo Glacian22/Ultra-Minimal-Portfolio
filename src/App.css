@@ -3,7 +3,11 @@
   height: 100vh;
   margin: auto;
   display: grid;
-  grid-template-rows:auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
+}
+
+#main::-webkit-scrollbar {
+  display: none !important;
 }
 
 #main {
@@ -12,11 +16,63 @@
   display: grid;
   align-content: center;
   justify-content: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .content {
-  max-width: 65ch
+  max-width: 65ch;
+  position: relative;
+  background-color: black;
+  padding: 10px;
+  border-radius: 1rem;
 }
+
+.content::before, .content::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--pink),
+    var(--elecblue),
+    var(--darkblue),
+    var(--elecblue),
+    var(--pink));
+  border-radius: inherit;
+  /* animation: animate-contact 1s; */
+  animation: rotation 5s linear infinite;
+  z-index: -1
+}
+
+.content::after {
+  filter: blur(2rem)
+}
+
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+:root {
+  --pink: #fc3dec;
+  --magenta: #f0138c;
+  --elecblue: #f0138c;
+  --darkblue: #4e35db;
+}
+
 
 @media only screen and (max-height: 720px) {
   #main {
@@ -25,14 +81,22 @@
   }
 }
 
-@keyframes animatecontact{
-  from{opacity:0} 
-  to{opacity:1}
+@keyframes animatecontact {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 @media only screen and (max-width: 780px) {
   .App {
-    width: 95vw;
+    width: 100vw;
     height: 90vh;
+  }
+  .content {
+    max-width: 50ch
   }
 }

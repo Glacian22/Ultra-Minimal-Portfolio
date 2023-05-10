@@ -21,8 +21,8 @@ export default function Contact() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({ "form-name": "contact-form", ...form })
     })
-    .then(() => setResponse('Thank you for getting in touch!'))
-    .catch(error => setResponse('Hmm, that did not send. Please try again later.'));
+      .then(() => setResponse('Thank you for getting in touch!'))
+      .catch(error => setResponse('Hmm, that did not send. Please try again later.'));
     setForm({ name: '', email: '', message: '' })
   };
 

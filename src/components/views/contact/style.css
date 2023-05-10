@@ -1,7 +1,9 @@
 #contact {
-  position:relative;
   width: min(65ch, 90vw);
-  animation:animatecontact 1s
+}
+
+#contact > * {
+  animation:animatecontact 1s;
 }
 
 #contact-form {
@@ -11,7 +13,6 @@
 
 #submitbtn {
   background-color: white;
-
 }
 
 input {

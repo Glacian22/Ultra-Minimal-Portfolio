@@ -13,7 +13,7 @@ let About = () => {
 
   return (
     <div className='content' id='about'>
-      <div>
+      {/* <div> */}
         <p>
           <span className='about-headers'>Name:</span>
           <span className='about-content' id='name'>{text.name}</span>
@@ -34,7 +34,7 @@ let About = () => {
           <span className='about-headers'>Other Technologies:</span>
           <span className='about-content' id='tech'>{text.tech}</span>
         </p>
-      </div>
+      {/* </div> */}
     </div>
   )
 }
