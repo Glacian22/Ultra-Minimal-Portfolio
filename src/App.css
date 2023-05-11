@@ -35,9 +35,8 @@
   background: conic-gradient(
     from var(--gradient-angle),
     var(--pink),
-    var(--elecblue),
+    var(--magenta),
     var(--darkblue),
-    var(--elecblue),
     var(--pink));
   border-radius: inherit;
   /* animation: animate-contact 1s; */
@@ -69,7 +68,7 @@
 :root {
   --pink: #fc3dec;
   --magenta: #f0138c;
-  --elecblue: #f0138c;
+  --elecblue: #00aaff;
   --darkblue: #4e35db;
 }
 
